@@ -1,0 +1,537 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 14pt;
+}
+
+body {
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Gelasio', serif;
+  background-color: black;
+}
+
+ul {
+  text-align: left;
+  margin-top: 0;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #ECEFF4;
+}
+
+a[target="_blank"]:after {
+  font-family: 'FontAwesome';
+  content: " \f360";
+}
+
+p {
+  color: #D8DEE9;
+}
+
+h1 {
+  color: #ECEFF4;
+  /* font-size: 50px; */
+}
+
+h2 {
+  color:#81A1C1;
+  /* font-size: 30px; */
+}
+td {
+  padding-right: 10px;
+}
+
+h3 {
+  color: #E5E9F0;
+}
+
+radio, select, input {
+  background-color: #E5E9F0;
+}
+
+.content {
+  display: grid;
+  grid-gap: 10px;
+  place-items: stretch;
+  overflow-x: hidden;
+  width: 100%;
+
+  background-image:
+  linear-gradient(to bottom, black 50%, #4C566A);
+
+  color: #ECEFF4;
+}
+
+.content-block {
+  /* background-color: rgba(255, 255,255, 0.5); */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: center;
+
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 85%;
+}
+
+.break {
+  width: 100%;
+  margin: auto;
+  border: 0;
+  height: 1px;
+  margin-bottom:10px;
+  margin-top: 100px;
+
+  background-image: linear-gradient(90deg, black, #ECEFF4, black);
+  /* background-color: #ECEFF4; */
+}
+
+.first {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+
+  display: grid;
+  grid-gap: 10px;
+  place-items: stretch;
+
+  color: #ECEFF4;
+
+  height: 100vh;
+}
+
+.second {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+
+  background-color: #3B4252;
+  border: #434C5E solid;
+  border-radius: 10px;
+}
+
+.third {
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
+
+  margin-bottom: 10%;
+  overflow-y: visible;
+}
+
+.fourth {
+  grid-column: 2 / 4;
+  grid-row: 4 / 5;
+
+  background-color: #3B4252;
+  border: #2E3440 solid;
+  border-radius: 10px;
+}
+
+.fifth {
+  grid-column: 1 / 5;
+  grid-row: 5 / 6;
+
+  min-height: 325px;
+
+  display: flex;
+}
+
+.button {
+  display: inline-block;
+  background-color: transparent;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #E5E9F0;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  color: #D8DEE9;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: black;
+  background-color: #E5E9F0;
+}
+
+.space-hero {
+  grid-column: 1 / 4;
+  grid-row: 1 / 6;
+
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-image:
+    linear-gradient(to bottom, transparent 80%, black),
+    url('../assets/phil-botha-a0TJ3hy-UD8-unsplash.jpg');
+}
+
+.gallery-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: center;
+
+  margin: auto;
+  margin-top: 10%;
+  width: 95%;
+}
+
+.gallery {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.polaroid {
+  border: 10px solid #D8DEE9;
+  border-bottom: 40px solid #D8DEE9;
+  background: #D8DEE9;
+  box-shadow: 2px 4px 16px rgba(0,0,0,.5);
+}
+
+.polaroid > img {
+  width: 100%;
+  /* height: 80%; */
+}
+
+.polaroid > div {
+  padding-top: 20px;
+  width: 50%;
+  color: black;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+#img-top-left {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  transform: rotate(-21deg);
+}
+
+#img-top-right {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  transform: rotate(7deg);
+}
+
+#img-middle-middle {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  margin: -90px;
+}
+
+#img-bottom-left {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  transform: rotate(-7deg);
+}
+
+#img-bottom-right {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  /* border-bottom: 10px solid #D8DEE9; */
+
+  transform: rotate(21deg);
+}
+
+#title { /* names */
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  flex-direction: column;
+}
+
+#info {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+
+  flex-direction: column;
+}
+
+#links {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+
+  flex-direction: row;
+}
+
+#about {
+  grid-column: 2 / 3;
+  grid-row: 1 / 5;
+
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+}
+
+#ucluelet-link {
+  align-self: center;
+}
+
+#us {
+  grid-column: 2 / 3;
+  grid-row: 1 / 5;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#rsvp {
+  grid-column: 2 / 3;
+  grid-row: 1 / 5;
+
+  flex-direction: column;
+  margin-top: 0%;
+}
+
+#invite-code {
+  width: 20%;
+  margin: 5px;
+}
+
+#submit-invite-code {
+  width: 150px;
+  margin: 10px;
+}
+
+#submit-rsvp-form {
+  width: 60%;
+}
+
+label, input, select {
+  margin-right: 2%;
+  width: 48%;
+}
+
+.guest-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.guest-label {
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.form-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  background-color: #D8DEE9;
+  color: #2E3440;
+  top: 0px;
+  height: 15px;
+  width: 15px;
+  border: 0;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-left: 5px;
+  outline: none;
+}
+
+.form-radio:checked::before {
+  font-size: 10px;
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  content: '\02143';
+  transform: rotate(40deg);
+}
+
+.form-radio:hover {
+  background-color: #ECEFF4;
+}
+
+.form-radio:checked {
+  background-color: #D8DEE9;
+}
+
+.attendance-radio {
+  margin-bottom: 10px;
+}
+
+.meal-notes-container {
+  margin-top: 10px;
+}
+
+#loading-icon {
+  display: none;
+  margin-top: 20px;
+}
+
+.select-wrap {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.select-box {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px;
+  background-color: #ECEFF4;
+  border: none;
+  border-radius: 1px;
+  outline: none;
+  color: #2E3440;
+  cursor: pointer;
+}
+
+.select-point {
+  position: absolute;
+  top: 6px;
+  right: 50px;
+  font: 9px 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2E3440;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+.comments-container {
+  margin-bottom: 20px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.comments-input {
+  width: 75%;
+}
+
+#footer {
+  flex: 1;
+  margin-bottom: 0;
+
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: center;
+
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-image:
+    url('../assets/landscape.png');
+}
+
+.credit {
+  font-size: 0.7em;
+  padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 64em) {
+  .select-point {
+    right: 45px;
+    top: 10px;
+  }
+}
+
+/* @media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+  html, body {
+    font-size: 14pt;
+  }
+} */
+
+@media only screen and (max-width: 64em) {
+  /* html, body {
+    font-size: 12pt;
+  } */
+
+  .select-point {
+    right: 45px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .space-hero {
+    background-size: cover;
+  }
+
+  #img-bottom-right {
+    display: none;
+  }
+
+  #img-top-right {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  html, body {
+    font-size: 10pt;
+  }
+
+  .select-point {
+    right: 35px;
+  }
+
+  #invite-code {
+    width: 40%;
+    margin: 5px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  #img-bottom-right {
+    display: none;
+  }
+
+  #img-top-right {
+    display: none;
+  }
+
+  #img-middle-middle {
+    display: none;
+  }
+
+  #footer {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .select-point {
+    right: 30px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .select-point {
+    right: 20px;
+  }
+}
