@@ -1,5 +1,13 @@
+:root {
+  --text: #d8dee9;
+  --bg: #434c5e;
+  --highlight: #81a1c1;
+  --parent: #2e3440;
+}
+
 * {
   box-sizing: border-box;
+  color: var(--text);
 }
 
 html, body {
@@ -27,7 +35,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: #ECEFF4;
 }
 
 a[target="_blank"]:after {
@@ -35,29 +42,14 @@ a[target="_blank"]:after {
   content: " \f360";
 }
 
-p {
-  color: #D8DEE9;
-}
-
-h1 {
-  color: #ECEFF4;
-  /* font-size: 50px; */
-}
-
-h2 {
-  color:#81A1C1;
-  /* font-size: 30px; */
-}
 td {
   padding-right: 10px;
 }
 
-h3 {
-  color: #E5E9F0;
-}
 
 radio, select, input {
-  background-color: #E5E9F0;
+  background-color: var(--text);
+  color: var(--bg)
 }
 
 .content {
@@ -68,9 +60,7 @@ radio, select, input {
   width: 100%;
 
   background-image:
-  linear-gradient(to bottom, black 50%, #4C566A);
-
-  color: #ECEFF4;
+  linear-gradient(to bottom, black 50%, var(--parent));
 }
 
 .content-block {
@@ -96,8 +86,7 @@ radio, select, input {
   margin-bottom:10px;
   margin-top: 100px;
 
-  background-image: linear-gradient(90deg, black, #ECEFF4, black);
-  /* background-color: #ECEFF4; */
+  background-image: linear-gradient(90deg, black, var(--text), black);
 }
 
 .first {
@@ -108,8 +97,6 @@ radio, select, input {
   grid-gap: 10px;
   place-items: stretch;
 
-  color: #ECEFF4;
-
   height: 100vh;
 }
 
@@ -117,8 +104,7 @@ radio, select, input {
   grid-column: 2 / 4;
   grid-row: 2 / 3;
 
-  background-color: #3B4252;
-  border: #434C5E solid;
+  background-color: var(--bg);
   border-radius: 10px;
 }
 
@@ -134,8 +120,7 @@ radio, select, input {
   grid-column: 2 / 4;
   grid-row: 4 / 5;
 
-  background-color: #3B4252;
-  border: #2E3440 solid;
+  background-color: var(--bg);
   border-radius: 10px;
 }
 
@@ -152,13 +137,13 @@ radio, select, input {
   display: inline-block;
   background-color: transparent;
   padding: 0.35em 1.2em;
-  border: 0.1em solid #E5E9F0;
+  border: 0.1em solid var(--text);
+  color: var(--text);
   margin: 0 0.3em 0.3em 0;
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
   font-weight: 300;
-  color: #D8DEE9;
   text-align: center;
   transition: all 0.2s;
 }
@@ -166,7 +151,9 @@ radio, select, input {
 .button:hover {
   cursor: pointer;
   color: black;
-  background-color: #E5E9F0;
+  background-color: var(--highlight);
+  border: 0.1em solid var(--highlight);
+
 }
 
 .space-hero {
@@ -200,9 +187,9 @@ radio, select, input {
 }
 
 .polaroid {
-  border: 10px solid #D8DEE9;
-  border-bottom: 40px solid #D8DEE9;
-  background: #D8DEE9;
+  border: 10px solid var(--text);
+  border-bottom: 40px solid var(--text);
+  background: var(--text);
   box-shadow: 2px 4px 16px rgba(0,0,0,.5);
 }
 
@@ -248,7 +235,6 @@ radio, select, input {
 #img-bottom-right {
   grid-column: 3 / 4;
   grid-row: 3 / 4;
-  /* border-bottom: 10px solid #D8DEE9; */
 
   transform: rotate(21deg);
 }
@@ -339,8 +325,8 @@ label, input, select {
   appearance: none;
   display: inline-block;
   position: relative;
-  background-color: #D8DEE9;
-  color: #2E3440;
+  background-color: var(--text);
+  color: var(--parent);
   top: 0px;
   height: 15px;
   width: 15px;
@@ -361,20 +347,20 @@ label, input, select {
   transform: rotate(40deg);
 }
 
-.form-radio:hover {
-  background-color: #ECEFF4;
-}
-
-.form-radio:checked {
-  background-color: #D8DEE9;
-}
-
 .attendance-radio {
   margin-bottom: 10px;
 }
 
+.attendance-radio-label {
+  margin-right: 50px;
+}
+
 .meal-notes-container {
   margin-top: 10px;
+}
+
+.meal-notes-input {
+  padding-left: 10px;
 }
 
 #loading-icon {
@@ -393,11 +379,10 @@ label, input, select {
   -moz-appearance: none;
   appearance: none;
   padding: 5px;
-  background-color: #ECEFF4;
   border: none;
   border-radius: 1px;
   outline: none;
-  color: #2E3440;
+  color: var(--parent);
   cursor: pointer;
 }
 
@@ -408,12 +393,12 @@ label, input, select {
   font: 9px 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2E3440;
+  color: var(--parent);
 }
 
 select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #000;
+  text-shadow: 0 0 0 black;
 }
 
 .comments-container {
@@ -424,6 +409,7 @@ select:-moz-focusring {
 
 .comments-input {
   width: 75%;
+  padding-left: 10px;
 }
 
 #footer {
