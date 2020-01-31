@@ -432,7 +432,6 @@ select:-moz-focusring {
 
   justify-content: flex-start;
   align-items: flex-end;
-  align-content: center;
 
   background-repeat: no-repeat;
   background-position: bottom;
@@ -452,20 +451,7 @@ select:-moz-focusring {
   }
 }
 
-/* @media only screen
-and (min-device-width : 375px)
-and (max-device-width : 812px)
-and (-webkit-device-pixel-ratio : 3) {
-  html, body {
-    font-size: 14pt;
-  }
-} */
-
 @media only screen and (max-width: 64em) {
-  /* html, body {
-    font-size: 12pt;
-  } */
-
   .select-point {
     right: 45px;
   }
@@ -521,6 +507,7 @@ and (-webkit-device-pixel-ratio : 3) {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    align-content: center;
   }
 }
 
