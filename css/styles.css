@@ -10,6 +10,10 @@
   color: var(--text);
 }
 
+h1, h2, h3 {
+  color: #ECEFF4;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -26,11 +30,15 @@ body {
   background-color: black;
 }
 
+p {
+  padding-left: 1em;
+}
+
 ul {
   text-align: left;
   margin-top: 0;
   margin-left: 0;
-  padding-left: 1em;
+  padding-left: 2em;
 }
 
 a {
@@ -47,8 +55,8 @@ td {
 }
 
 
-radio, select, input {
-  background-color: var(--text);
+radio, select, input, textarea {
+  background-color: #ECEFF4;
   color: var(--bg)
 }
 
@@ -187,9 +195,9 @@ radio, select, input {
 }
 
 .polaroid {
-  border: 10px solid var(--text);
-  border-bottom: 40px solid var(--text);
-  background: var(--text);
+  border: 10px solid white;
+  border-bottom: 40px solid white;
+  background: white;
   box-shadow: 2px 4px 16px rgba(0,0,0,.5);
 }
 
@@ -200,7 +208,7 @@ radio, select, input {
 
 .polaroid > div {
   padding-top: 20px;
-  width: 50%;
+  width: 60%;
   color: black;
   font-family: 'Reenie Beanie', cursive;
   font-size: 1.5em;
@@ -315,7 +323,8 @@ label, input, select {
 }
 
 .guest-label {
-  font-weight: 900;
+  color: #ECEFF4;
+  font-weight: 550;
   margin-bottom: 15px;
 }
 
@@ -325,7 +334,7 @@ label, input, select {
   appearance: none;
   display: inline-block;
   position: relative;
-  background-color: var(--text);
+  background-color: #ECEFF4;
   color: var(--parent);
   top: 0px;
   height: 15px;
@@ -352,15 +361,14 @@ label, input, select {
 }
 
 .attendance-radio-label {
+  color: #ECEFF4;
+  font-weight: 600;
   margin-right: 50px;
+  padding-bottom: 3em;
 }
 
 .meal-notes-container {
   margin-top: 10px;
-}
-
-.meal-notes-input {
-  padding-left: 10px;
 }
 
 #loading-icon {
@@ -410,6 +418,8 @@ select:-moz-focusring {
 .comments-input {
   width: 75%;
   padding-left: 10px;
+  padding-top: 10px;
+  margin-top: 1em;
 }
 
 #footer {
